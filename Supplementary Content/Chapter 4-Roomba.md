@@ -4,7 +4,7 @@ Here are two important notes with respect to  /cmd_vel messages on a robot syste
 
 1. With the ROS 2 Jazzy controller architecture, cmd_vel messages used in relevant Jazzy packages since 2024, are now **TwistStamped** type, vs **Twist**. The above referenced **slgrobotics** fork that informs code in several places, has been modified with revised launch and yaml parameter files to support it. Also added are remappings to /diff_cont/* to match Jazzy Controller architecture used in “sim” Gazebo Simulations. Your regular teleop Node might not work with your robot base configuration as with current Jazzy distribution the default “stamped” parameter is false. Refer to the  **ros-teleop/teleop_twist_keyboard** and **teleop_twist joy** for details of the stamped parameter and how to set “stamped:=true” on a CLI or as a parameter in a configuration yaml file. eg. to launch the “**teleop_twist_keyboard**”,
 
-**$ ros2 run teleop_twist_keyboard keyboard_teleop_twist_keyboard –ros-args -p stamped:=true** .  
+**\$ ros2 run teleop\_twist\_keyboard keyboard_teleop_twist_keyboard –ros-args -p stamped:=true** .  
 
 2. The current Jazzy release includes a ROS 2  package called “twist_mux” that provides a multiplexer for geometry_msgs::Twist messages. It subscribes to N input twist topics and publishes outputs the messages from a single /cmd_vel one. This /cmd_vel message would be subscribed by Robot Base packages.  For selecting the topic they are prioritized based on their priority, the messages timeout and M input lock topics that can inhibit one input twist topic. This is described in these documents, illustrated in the Fig. 1 below. 
 

@@ -1,4 +1,4 @@
-VSCode-Install-Configure-Linux-Cheatsheet_20241211.txt
+VSCode-Install-Configure-Linux-Cheatsheet_20250623.txt
 Author: arlunan@ieee.org
 
 This document is posted in Documents folder on the relevant Mockbots Github. 
@@ -47,34 +47,45 @@ Configuring & Running Remote Extension https://www.youtube.com/watch?v=k2TLdXHjV
 Visual Studio Code ROS Extension - Season 1 Episode 7 - Using over ssh
 https://www.youtube.com/watch?v=teA20AjBlG8
 
-________________________________________________________________________________________________________
-Detailed steps to Install Remote Development over SSH (From Ubuntu Desktop to Raspberry Pi Host OR MAC to Raspberry Pi)
+_________________________________________________________________________________________
+Detailed steps to Install "Remote Development over SSH" (From Ubuntu Desktop to Raspberry Pi Host OR MAC to Raspberry Pi)
 https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack
-https://code.visualstudio.com/docs/remote/ssh-tutorial
+https://code.visualstudio.com/docs/remote/ssh-tutorial. Disregard descriptions for Windows Machines.
 
-Remote Development extension task
+Remote Development Extension task
 
-Configure Private-Public Keys to enable Local Desktop Machine to connect by ssh to the Remote SSH Host on the Raspberry Pi. Use the same id_ed25519 (private) and id_ed25519.pub for MAC ) 
+Ubuntu Desktop is referred to as the "Local Machine" with a support "SSH Client" and Ubuntu Raspberry Pi as the "Remote Machine" running a "SSH Server. If not already done, install on the Raspberry Pi Terminal : $ sudo apt get openssh-server. Confirm running with : $ sudo systemctl status ssh, or $ sudo systemctl restart ssh 
+
+It is also suggested to use key based authentication for your Raspberry Pi host.
+Configure Private-Public Keys to enable Local Desktop Machine to connect by ssh to the Remote SSH Host on the Raspberry Pi. Use the same id_ed25519 (private) and id_ed25519.pub for a MAC Local Machine) 
 
 https://code.visualstudio.com/docs/remote/troubleshooting Connecting to your MACOS or Linux Machine
 
-SSH Tips to Configure key based authentication
-Quick Start: Using SSH Keys located in ~/.ssh/
+SSH Tips to Configure SSH key based authentication
+Quick Start: Using SSH Keys located which are stored in ~/.ssh/
 
-ssh-keygen -t ed25519 -b 4096
-chmod 400 ~/.ssh/id_ed25519
+If not already done, create your local SSH key pair
+$ ssh-keygen -t ed25519 -b 4096
+Restrict the permissions on the private key file
+$ chmod 400 ~/.ssh/id_ed25519
 
-export USER_AT_HOST="your-user-name-on-host@hostname"
-export PUBKEYPATH="$HOME/.ssh/id_ed25519.pub"
+To Authorize your Linux or MACOS machine to connect, from a Local Machine Terminal:
+$ export USER_AT_HOST="your-user-name-on-host@hostname"
+Run in Terminal: 
+For example on a typical raspberry Pi Ubuntu Machine:
+$ export USER_AT_HOST="ubuntu@rp5-ub24j-r2.local"
+$ export PUBKEYPATH="$HOME/.ssh/id_ed25519.pub"
 
-ssh-copy-id -i "$PUBKEYPATH" "$USER_AT_HOST"
+Copy the Local SSH keys to the Remote Raspberry Pi Machine, run in Local Desktop Machine Terminal:
+$ ssh-copy-id -i "$PUBKEYPATH" "$USER_AT_HOST"
 
+Open your VSCode App on the Desktop Machine 
 Connect Local VSCode to Remote Host
-From Terminal, ssh user@hostname (e.g ubuntu@rp4-ub22h-mt.local)
+From Terminal, ssh user@hostname (e.g ubuntu@rp5-ub24j-r2.local)
 
-From far left, Remote-SSH commands (Blue ><)
-	Remote SSH:Connect to Host > Select user@hostname.local and Confirm to Continue0.0
-New Window should open on the Local Desktop Machine
+From far bottom left, Note Blue >< icon: Remote-SSH commands
+	Remote SSH:Connect to Host > Select user@hostname.local and Confirm to Continue. VSCode with connect and install a version of VSCode on the Remote Raspberry Pi.
+A New VSCode Window should open connected on the Local Desktop Machine connected to the Remote Raspberry Pi Machine.
 
 _____________________________________________________________________________________
 Git in VS Code
@@ -107,7 +118,7 @@ git rm -r .vscode
 
 OR if applicable, seems the case for my Linux configurations, 
 git rm -r .alpackages
-got rm -r .*.app
+git rm -r .*.app
 
 
 
