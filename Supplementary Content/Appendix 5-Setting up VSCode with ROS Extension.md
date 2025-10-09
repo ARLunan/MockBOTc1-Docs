@@ -32,6 +32,6 @@ Uploading, compiling and running the code
 Using GitSource Control in VS Code
 https://code.visualstudio.com/docs/sourcecontrol/overview describes the use of Git in VSCode and what Extensions might be installed.  
 
-Refer to the “**VSCode-Install-Configure-Linux-Cheatsheet**” posted in the Documents folder on the relevant Mockbots Github. For Mockbot Create1: MockBots-Docs https://github.com/ARLunan/MockBot-Docs.
+Refer to the “**VSCode-Install-Configure-Linux-Cheatsheet**” posted in the Documents folder on the relevant Mockbots Github. For Mockbot Create1: MockBots-Docs https://github.com/ARLunan/MockBOTc1 Docs.
 
 

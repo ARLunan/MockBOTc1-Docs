@@ -87,6 +87,9 @@ From far bottom left, Note Blue >< icon: Remote-SSH commands
 	Remote SSH:Connect to Host > Select user@hostname.local and Confirm to Continue. VSCode with connect and install a version of VSCode on the Remote Raspberry Pi.
 A New VSCode Window should open connected on the Local Desktop Machine connected to the Remote Raspberry Pi Machine.
 
+To avoid being asked to confirm user.name and user.email
+Configure Setting > Extensions > Git > Require Git User Config 
+uncheck the BOX
 _____________________________________________________________________________________
 Git in VS Code
 Using Git Source Control in VSCode
