@@ -1,7 +1,7 @@
 ### Appendix 5: Setting up and using Microsoft VSCode  Application with ROS Extension, Remote Development Extension and the “Out-of-the-Box Git/Github source control code management.
 **Installation**  
 
-The **VSCode** application can be installed on Linux – Ubuntu, Windows , and Mac machines. It is suggested that it be installed on your **Local Robot Development Desktop Machine** where it can manage code development on both that **Desktop Machine** and the  **Remote Raspberry Pi Robot  Machine (SBC)**. Extensions are available to very conveniently support **ROS 2** code development and a “**SSH-Remote**” connection function to connect to, install and edit packages on the Raspberry Pi Robot.  
+The **VSCode** application can be installed on Linux – Ubuntu, Windows , and Mac machines. It is suggested that it be installed on your **Local Robot Development Desktop Machine** where it can manage code development on both that **Desktop Machine** and the  **Remote Raspberry Pi Robot  Machine (SBC)**. Extensions are available to very conveniently support **ROS 2** code development and a “**SSH-Remote**” connection function to connect to, install and edit packages on the Raspberry Pi Robot. VSCode now includes Microsoft CoPilot provides AI-powered inline code suggestions as you type. 
 
 Helpful tutorials videos explain applications of 
 VSCode to ROS 2 Project Development
@@ -30,8 +30,10 @@ Installing the ROS extension on the remote computer
 Uploading, compiling and running the code
 
 Using GitSource Control in VS Code
-https://code.visualstudio.com/docs/sourcecontrol/overview describes the use of Git in VSCode and what Extensions might be installed.  
+https://code.visualstudio.com/docs/sourcecontrol/overview describes the use of Git in VSCode and what Extensions might be installed. 
 
-Refer to the “**VSCode-Install-Configure-Linux-Cheatsheet**” posted in the Documents folder on the relevant Mockbots Github. For Mockbot Create1: MockBots-Docs https://github.com/ARLunan/MockBOTc1 Docs.
+In addition to the above Extensions, suggest reviewing the list of Recommended Extensions where  these are particularly relevent for ROS 2 development: Microsoft C/C+, Git, GitHub CoPilot, Preview, Print, variety of ROS2,  
+
+Refer to the “**VSCode-Install-Configure-Linux-Cheatsheet**” posted in the Documents folder on the relevant Mockbots Github. For Mockbot Create1/Roomba: MockBots-Docs https://github.com/ARLunan/MockBOTc1 Docs.
 
 
