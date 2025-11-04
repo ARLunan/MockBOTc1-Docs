@@ -32,7 +32,9 @@ Uploading, compiling and running the code
 Using GitSource Control in VS Code
 https://code.visualstudio.com/docs/sourcecontrol/overview describes the use of Git in VSCode and what Extensions might be installed. 
 
-In addition to the above Extensions, suggest reviewing the list of Recommended Extensions where  these are particularly relevent for ROS 2 development: Microsoft C/C+, Git, GitHub CoPilot, Preview, Print, variety of ROS2,  
+In addition to the above Extensions, suggest reviewing the list of Recommended Extensions where  these are particularly relevent for ROS 2 development: Microsoft C/C+, Git, Preview, Print, ROS2, Preview, Print, ROS2. Also consider installing GitHub Copilot is an AI-powered coding assistant deeply integrated into Visual Studio Code (VS Code), designed to help developers write code faster and more efficiently.  It provides features ranging from simple code completions to autonomous task execution, based on the context of your project and natural language prompts.  
+
+And GitHub Copilot, an AI-powered coding assistant integrated into Visual Studio Code. It provides code suggestions, explanations, and automated implementations based on natural language prompts and existing code context. Copilot has been trained on public code repositories and can assist with most programming languages and frameworks.
 
 Refer to the “**VSCode-Install-Configure-Linux-Cheatsheet**” posted in the Documents folder on the relevant Mockbots Github. For Mockbot Create1/Roomba: MockBots-Docs https://github.com/ARLunan/MockBOTc1 Docs.
 
