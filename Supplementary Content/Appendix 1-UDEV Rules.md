@@ -17,7 +17,7 @@ Here is the udev rules that is installed by the system for a Binary (Debian) ins
 
 #### set the udev rule , make the device_port be fixed by rplidar
 
-KERNAL=="ttyUSB*", ATTRS{idVendor}=="0403" ATTRS{idProduct}=="6001", MODE:-"0666', SYMLINK+="create1"  
+KERNAL=="ttyUSB*", ATTRS{idVendor}=="0403" ATTRS{idProduct}=="6001", MODE:-"0666', SYMLINK+="create_1"  
 
 KERNEL=="ttyUSB*", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60", MODE:="0666", SYMLINK+="rplidar"  
 
